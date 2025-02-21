@@ -4,7 +4,7 @@
 
 - [Glossary](glossary.md)
 	- [Kast](kast.md) 
-	- [Bookshelf](boockshelf.md) 
+	- [Bookshelf](bookshelf.md) 
 	- [Book](book.md)
 	- [Spell](spell.md)
 	- [Rune](rune.md)
