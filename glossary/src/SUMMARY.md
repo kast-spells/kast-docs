@@ -5,6 +5,7 @@
 - [Glossary](glossary.md)
 	- [Kast](kast.md) 
 	- [Bookshelf](bookshelf.md) 
+	- [Chapter](chapter.md)
 	- [Book](book.md)
 	- [Spell](spell.md)
 	- [Rune](rune.md)
