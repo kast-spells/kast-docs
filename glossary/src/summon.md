@@ -1,3 +1,5 @@
+# WIP, not updated to current summon behaviour
+
 A summon is other of the kast main features, a summon is a template similar to a Kaster but with the following rules:
 
 - Only allow Kubernetes and ArgoCD default resourses
