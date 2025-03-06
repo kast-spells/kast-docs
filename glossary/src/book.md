@@ -19,4 +19,13 @@ summon:
   path: ./summon
   revision: master
 ``` 
-# wip (need to add all the defaults)
+
+Directory tree should look like this.
+
+```
+my-kast-repository
+├── bookrack
+│   └── my--book
+└── kast # ...
+
+```
