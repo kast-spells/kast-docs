@@ -1,6 +1,10 @@
-A rune is an independent spell that is requiren inside another spell, sometimes you need many charts to define just one service, or some charts require also charts that provdes CRD's or addons for the main chart, thats when you use a rune. that behaves just like a common spell but the limitations that doesn't allow using glyphs on it, so, is not recomended for services. just for CRD's addons and similar behaving charts.
+# Rune
 
-An example of a rune lookes like this
+A rune is an independent spell that serves as a component within another spell. In some cases, creating a single app may require multiple charts, or certain charts might need additional resources like addons or CRD's for proper functionality. These specialized charts are where runes come into play they function independently but are specifically designed to complement the main chart without being an independent spell.
+
+It's important to note that runes are not recommended for use in independent apps due to their specific requirements and limitations, such as not supporting glyphs or requiring additional resources beyond the main spell. Instead, they are primarily utilized within CRD addons, plugins, or supplementary charts that enhance the main application.
+
+An example of a rune lookes like this.
 
 ```yaml
 name: app-name
