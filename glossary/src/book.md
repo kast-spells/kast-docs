@@ -1,9 +1,21 @@
-The book is one of the standar structures that Kast offer as solution, A book is a set of Chapters, the idea of a book is to manage the defaults of all the chapters inside it, a book can be a cluster which you want to keep separated from other ones configuration, or a group of setting that you need to manage independintly to another group of settings, it counts with an index, Here you setup the chapters that going to be read by the book (a book doesn't adds a chapter by default, this is to make easy develop without deploying anything in case of autosync enabled),here is also where you can setup default **Kaster** and **Summon** (usually the Kast one), This is an example of Book `index.yaml`.
+# Book
+
+A `book` is a standard structure in Kast designed to organize definitions. It consists
+of a directory containing an `index.yaml` file, an optional `lexicon` folder, and one or more
+directories, which are the `chapters`.
+
+The purpose of a `book` is to manage default definitions across its `chapters`. This structure
+allows for separating definitions into different `books` based on factors like clusters, development
+stages, or infrastructure sections.
+
+Within a `book`, the index file specifies which chapters will be included by default (to avoid deployment of resources of an on development chapter if autosync is enabled). Here, you can also set up defaults for both `Kaster` and `Summon`.
+
+This is an example for `index.yaml`.
 
 ```yaml
 name: my-book
 
-chapters:
+chapters: # must have same name as the directory
   - intro # my basic CRDs and CNI 	
   - testing # testing infrastructure
   - Staging # Staging infrastructure
@@ -25,7 +37,11 @@ Directory tree should look like this.
 ```
 my-kast-repository
 ├── bookrack
-│   └── my--book
+│   └── my-book # book directory
+│       ├── _lexicon # lexicon directory
+│       ├── index.yaml
+│       ├── intro # chapters
+│       └── ...
 └── kast # ...
 
 ```
