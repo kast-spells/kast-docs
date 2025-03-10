@@ -2,46 +2,20 @@
 
 ## What is Kast.
 
-Lets imagine Kast as a Librarian that checks for all the *Books* and its contents, Kast is a tool to manage Argocd Apps values, and that *Renders* new apps.
+Kast is an open-source tool designed to streamline infrastructure management for platform development. It serves as a comprehensive set of standard directories and files to setup Cluster definitions.
 
-as an addition, Kast also offers standar resources and configurations similar to a package manager using common Helmcharts that are imported from the **Kaster**, and a set of standard resources to wrap the deploy any docker container, called **Summon**.
+Imagine Kast as a Librarian that checks for all the *Books* and its contents, Kast is a tool that uses Helm charts to deploy on resources in ArgoCD following an App of Apps pattern. This allows it to orchestrate complex infrastructures by rendering them based on both chart and user defined values and configurations. Kast ensures that applications are deployed maintaining a clean and organized structure.
 
-It allows you to standarize the whole deployment of apps by building metacharts that are automatically managed by Argo CD from the Kast sub-repo as an Apps of Apps. with both default and user defined Values from any helm chart and/or from Kaster or Summon.
+As an addition, Kast also offers standard resources and definitions via the **Kaster**, which works similar to a package manager using common Helmcharts that are imported from a repository to easily setup tools like Istio, External DNS or Vault, between othres.
 
-This allows the User to define a whole platform with its standard set of resources and CRD in a simple, short, set of yaml file that follows a directory standard, setting the whole infrastructure as tidy, compact and manageable as posible, following a GitOps approach. 
+It also provides a set of standard resources to wrap the deployment of any docker container, that are taken from The **Summon** repository, This feature enables users to wrap Docker containers with pre-standardized resources, simplifying deployment processes.
+
+It allows you to standarize the whole whole platform by building Apps that are automatically managed by Argo CD from the Kast sub-repo with an Apps of Apps pattern. with both default and user defined Values, and resources from any helm chart and/or from **Kaster** and **Summon** repositories.
+
+This is managed by a library-like structure, with a `bookrack` full of `books` that contains `spells`, which are the definitions of an app that comes from a chart and/or manifest.
+
+Kast provides a structured environment where all infrastructure elements are organized, this allows the User to define a whole platform with its standard set of resources and CRD in a simple, short, set of YAML files that follows a directory standard, setting the whole infrastructure as tidy, compact and manageable as posible, following a GitOps. Kast simplifies complex deployment processes with a simple and esaily manageable YAML based structure. 
 
 All this works by the **Kast** main chart, added as sub repository, which has all the Helm code that renders the desired infrastructure using the charts, repos and values given by the User, Kaster and/or Summon.
 
-To add Kast to your repository you have to add it as sub repository like this
-
-```bash
-git submodule add https://github.com/kast-spells/kast.git kast
-```
-
-and then apply the Apps of Apps definition just like this:
-
-```bash
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: my-bookrack
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: git@github.com:me/my-bookrack.git
-    targetRevision: main
-    path: kast # dont change this!
-    helm:
-      parameters:
-        - name: "name"
-          value: my-first-book
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd
-  syncPolicy:
-    retry:
-      limit: 2
-    syncOptions:
-      - CreateNamespace=true
-```
+To how to setup a Kast-managed repository reffer to [link to repo WIP]
