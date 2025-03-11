@@ -1,13 +1,26 @@
-# WIP, not updated to current summon behaviour
+# Summon
 
-A summon is other of the kast main features, a summon is a template similar to a Kaster but with the following rules:
+`summon` is a way to define a microservice with a standarized deployment approach, by inherits most of its definitions from its chapter/book `index.yaml` via it's `summon` and/or `kaster`, this allows to easily deploy any kind of app with an standarized chart suitable for platform needs.
 
-- Only allow Kubernetes and ArgoCD default resourses
-- Its oriented to independent Containers.
+With the `summon` you can implement any container as part of your platform definitions following the same standard 
 
-So imagine you want to add to your cluster a container that doesnt have a helmchart, or the helmchart is not setup for your specific usage, you can setup a summon template that is a set of default kubernetes resources to make a chart that suits your needs with no effort.
+An example of `summon` implementation. 
+```yaml
+name: nginx-summon # name can be any
+image:
+  name: nginx # this looks for nginx on dockerhub
+   
+istio: # this adds the istio glyph to the summon, here goes the glyph set name
+  my-external-virtualservice: # any name
+    type: virtualService
+    enabled: True
+    # subdomain: nginx # if you need subdomains
+    host: nginx-test
+    httpRules:
+      - prefix: /a
+        port: 80
+    selector:
+      access: external
+```
 
-> Example of summoner aplication
-
-
-# SUMMON AS SOLUTOION NOT AN OPTION
+To how to setup a summon, see [link to index]
