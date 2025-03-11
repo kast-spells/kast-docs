@@ -1,7 +1,9 @@
 # Kaster
-The Kaster is one of the main parts of **Kast**, its a kind of Package manager for specific resources, to learn more on how to use it, refer to Kaster Handbook. it is managed by Glyphs. which are invocations of Kaster's resource charts, and Lexicon, which is an standar configuration dependencie directory to share configurations between glyphs. to see an example, refer to **Glyphs** and **Lexicon** in this Glossary.
+The Kaster is one of the more useful parts of **Kast**,serving as a repository for preconfigured resource definitions, in the book and/or chapter `index.yaml` you can define a `kaster` repo, which contains preconfigured CRDs you can call via Glyphs. it works like a kind of Package manager for resource definitions, to learn more on how to use default `kaster` and understanding how its resources are setup, refer to Kaster Handbook(link to kaster handbook).
 
-You can make your own Kaster if you want or modify the one on the `arcane-praxis` repository to your own needs.
+Kaster resource definition are managed by `glyphs` (which are invocations of Kaster's resource charts) and the `lexicon`, that defines shared configuration dependencies to configurate between glyphs, for more information refer to **Glyphs** and **Lexicon** in this Glossary.
+
+You can make your own Kaster if you want or modify the one on the default Kaster repository to your own needs.
 
 it is refered on book and/or chapters index like this:
 
