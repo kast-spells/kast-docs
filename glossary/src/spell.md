@@ -1,6 +1,12 @@
-A spell is the definition of an app, it uses a Helm Chart to be defined, it belongs to an specific chapter, and can have multiple resources to work with it. it also can be defined as a **Summon** (reffer to summon in this glossary)
+# Spell
 
-an example of a spell looks like this:
+The central concept of **Kast** revolves around the idea of a "spell," which serves as the foundational definition that set all the resources required to build and deploy an applications using ArgocD. Each spell is intricately structured to encapsulate everything needed for an application, ensuring seamless integration within your platform.
+
+What makes spells particularly powerful is their ability to support multiple resources simultaneously, enabling the creation of versatile and robust platform-driven applications on a single yaml file. Additionally, Spells can be defined from jost Dockers without providing a chart via `Summon`.
+
+Spells are designed to work with optional complementary elements like **runes** and **glyphs**, which serve as  extensions to core chart. For more details, refer to them in this glossary.
+
+An example of a spell looks like this, It also includes examples of Glyphs (resources that are pre-defined in the kaster) and Runes (complementary charts like add-ons and CRD):
 
 ```yaml
 name: app-name
@@ -33,7 +39,3 @@ glyphs:
     specific: config
 
 ```
-
-It also includes examples of Glyphs (resources that are pre-defined in the kaster) and Runes (complementary charts like add-ons and CRD).
-
-Spells can be found inside chapters
