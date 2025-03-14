@@ -6,7 +6,7 @@
 
 Imagine **Kast** as a Librarian that checks for all the *Books* and its contents, **Kast** is a tool that uses Helm charts to deploy resources in ArgoCD following an **App of Apps** pattern. This allows you to orchestrate complex infrastructures by rendering them based on both chart and user defined values and configurations. **Kast** ensures that applications are deployed maintaining a clean and organized structure.
 
-As an addition, **Kast** also offers standard resources and definitions via the `kaster`, which works similar to a package manager using common Helm charts that are imported from a repository to easily setup tools like **Istio**, **External DNS** or **Vault**, between others.
+As an addition, **Kast** also offers standard resources and definitions via the `kaster`'s `glyphs`', which works similar to a package manager using common Helm charts that are imported from a repository to easily setup tools like **Istio**, **External DNS** or **Vault**, between others.
 
 It also provides a set of standard resources to wrap the deployment of any docker container, that are taken from The `summon` repository, This feature enables users to wrap Docker containers with pre-standardized resources, simplifying deployment processes.
 
