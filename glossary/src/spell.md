@@ -14,7 +14,7 @@ repository: https://github.com/chart/repo.git
 revision: v1.x
 path: helm-chart
 appParams:
-  disableAutoSync: true
+  disableAutoSync: false
 values: 
    some-vlue:
      to: override
