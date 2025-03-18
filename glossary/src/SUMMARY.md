@@ -14,8 +14,8 @@
 	- [Kaster](kaster.md)
 	- [Lexicon](lexicon.md)
 
-- [Kasting Manual](kasting_manual.md)
-   - [Cert Manager](certmanager.md) 
-   - [Istio](istio.md) 
-   - [External DNS](externaldns.md)
-   - [Vault](vault.md)
+- [Kasting Manual](kasting_manual/kasting_manual.md)
+   - [Cert Manager](kasting_manual/certmanager.md) 
+   - [Istio](kasting_manual/istio.md) 
+   - [External DNS](kasting_manual/externaldns.md)
+   - [Vault](kasting_manual/vault.md)
