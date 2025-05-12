@@ -31,9 +31,9 @@ values:
 ```
 
 ### This is a postgress database, for Vaults's backend #TODO add cloudnative postgress spell
+> no need to modify!, but check if you want to change something
 ```yaml
 name: vault-pg
-> no need to modify!, but check if you want to change something
 repository: ghcr.io/cloudnative-pg/charts
 chart: cluster
 revision: 0.2.1
