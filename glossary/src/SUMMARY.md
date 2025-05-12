@@ -1,18 +1,18 @@
 # Summary
 
 [Introduction](README.md)
-
-- [Glossary](glossary.md)
-	- [Kast](kast.md) 
-	- [Bookrack](bookrack.md) 
-	- [Book](book.md)
-	- [Chapter](chapter.md)
-	- [Spell](spell.md)
-	- [Rune](rune.md)
-	- [Glyph](glyph.md)
-	- [Summon](summon.md)
-	- [Kaster](kaster.md)
-	- [Lexicon](lexicon.md)
+glossary/
+- [Glossary](glossary/glossary.md)
+	- [Kast](glossary/kast.md) 
+	- [Bookrack](glossary/bookrack.md) 
+	- [Book](glossary/book.md)
+	- [Chapter](glossary/chapter.md)
+	- [Spell](glossary/spell.md)
+	- [Rune](glossary/rune.md)
+	- [Glyph](glossary/glyph.md)
+	- [Summon](glossary/summon.md)
+	- [Kaster](glossary/kaster.md)
+	- [Lexicon](glossary/lexicon.md)
 
 - [Kasting Manual](kasting_manual/kasting_manual.md)
    - [Cert Manager](kasting_manual/certmanager.md) 
