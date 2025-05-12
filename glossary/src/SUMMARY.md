@@ -19,3 +19,4 @@ glossary/
    - [Istio](kasting_manual/istio.md) 
    - [External DNS](kasting_manual/externaldns.md)
    - [Vault](kasting_manual/vault.md)
+   - [Cloudnative Postgres](kasting_manual/cloudnative-postgres.md)
