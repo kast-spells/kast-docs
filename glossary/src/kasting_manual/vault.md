@@ -29,6 +29,25 @@ appParams:
     argocd.argoproj.io/sync-wave: "1"
 values:
 ```
+### WIP description
+```yaml
+name: vault-config-operator
+repository: https://redhat-cop.github.io/vault-config-operator
+chart: vault-config-operator
+revision: v0.8.30
+appParams:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+values:
+  enableCertManager: true
+  enableMonitoring: false
+```
 
 ### This is a postgress database, for Vaults's backend #TODO add cloudnative postgress spell
 > no need to modify!, but check if you want to change something
