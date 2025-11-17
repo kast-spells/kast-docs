@@ -1,0 +1,82 @@
+site_name: Kast Documentation
+site_description: Documentation for the Kast Kubernetes automation system
+site_url: https://kast-spells.github.io/kast-docs/
+
+repo_name: kast-spells/kast-docs
+repo_url: https://github.com/kast-spells/kast-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+  - autorefs
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Contributing:
+    - Coding Standards: CODING_STANDARDS.md
+    - Good Practices: GOOD_PRACTICES.md
+  - Kasting Manual:
+    - Overview: kasting_manual/README.md
+    - Cert Manager: kasting_manual/certmanager.md
+    - Vault: kasting_manual/vault.md
+    - Istio: kasting_manual/istio.md
+    - External DNS: kasting_manual/externaldns.md
+  - Glossary:
+    - Overview: glossary/README.md
+    - Terms:
+      - Spell: glossary/glossary/spell.md
+      - Rune: glossary/glossary/rune.md
+      - Lexicon: glossary/glossary/lexicon.md
+      - Chapter: glossary/glossary/chapter.md
+      - Kast: glossary/glossary/kast.md
+      - Kaster: glossary/glossary/kaster.md
+      - Book: glossary/glossary/book.md
+      - Bookrack: glossary/glossary/bookrack.md
+      - Glyph: glossary/glossary/glyph.md
+      - Summon: glossary/glossary/summon.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kast-spells
